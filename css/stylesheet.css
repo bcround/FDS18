@@ -16,7 +16,11 @@ body {
   color: #181818;
   background: #fff;
 }
-
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
 /* 스킵 내비게이션 */
 .skip-nav {
   display: none;
@@ -35,10 +39,37 @@ body {
   width: 940px;
   margin: 0 auto;
 }
-
+/* 헤더 */
 .header {
   background: yellow;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  padding: 0 30px;
 }
+/* 로고 */
+.header .logo {
+  position: absolute;
+  margin: 0;
+  top: 50px;
+  left: 65px;
+}
+/* 안내 링크 목록 */
+.header .member {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
+}
+.header .member li {
+  display: inline-block;
+  padding: 2px 0;
+}
+.header .member a {
+  padding: 6px 0;
+  display: inline-block;
+  background: pink;
+}
+
 .visual {
   background: lime;
   height: 120px;
