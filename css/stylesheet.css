@@ -1,12 +1,82 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
 
+html {
+  font-size: 10px;
+}
 body {
   font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 1.4rem;
+  color: #181818;
+  background: #fff;
 }
 
 /* 스킵 내비게이션 */
-.skip-nav{
+.skip-nav {
   display: none;
+}
+/* body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+} */
+
+/* 레이아웃 */
+.header, 
+.visual,
+.main,
+.slogan {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  background: yellow;
+}
+.visual {
+  background: lime;
+  height: 120px;
+}
+.main {
+  background: skyblue;
+  /* display: flex; 수평정렬 모던브라우저에서 먹히는 방식 */
+  /* flex-flow: row nowrap; 수평정렬 모던브라우저에서 먹히는 방식 */
+  /* justify-content: space-between; */
+  padding: 30px 15px;
+  overflow: hidden;
+  min-height: 450px;
+}
+/* .clearfix::after {
+  content: "";
+  clear: both;
+  display: block;   
+} *//* block 넣는 이유는 content:"";로 만든 블록이 div가 아닌 inline요소인 span이기 때문 */
+
+.main .group {
+  float: left;
+  margin: 0 15px;
+}
+.main .group1 {
+  background: tomato;
+  width: 250px;
+}
+.main .group2 {
+  background: violet;
+  width: 380px;
+}
+.main .group3 {
+  background: lightgreen;
+  width: 190px;
+}
+.slogan {
+  background: orange;
+}
+.footer {
+  background: pink;
 }
