@@ -184,9 +184,36 @@ a {
 }
 
 .visual {
-  background: lime;
   height: 120px;
   position: relative;
+}
+@keyframes bgAni {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.visual::before, 
+.visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  animation: bgAni 2000ms alternate infinite ease-in-out;
+}
+.visual::before {
+  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+  background-position: 0 -10px, 670px 0;
+}
+.visual::after {
+  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+  background-position: 300px 0, 800px 0;
+  animation-delay: 1000ms;
 }
 .visual-text {
   /* position: absolute; */
@@ -196,7 +223,6 @@ a {
   animation-name: textAni;
   animation-duration: 3000ms;
   animation-fill-mode: forwards;
-  background-color: blueviolet;
 }
 .main {
   background: skyblue;
