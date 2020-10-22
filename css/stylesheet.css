@@ -182,7 +182,6 @@ a {
     transform: translate(400px,75px);
   }
 }
-
 .visual {
   height: 120px;
   position: relative;
@@ -239,19 +238,19 @@ a {
   display: block;   
 } *//* block 넣는 이유는 content:"";로 만든 블록이 div가 아닌 inline요소인 span이기 때문 */
 
-.main .group {
+.group {
   float: left;
   margin: 0 15px;
 }
-.main .group1 {
+.group1 {
   background: tomato;
   width: 250px;
 }
-.main .group2 {
+.group2 {
   background: violet;
   width: 380px;
 }
-.main .group3 {
+.group3 {
   background: lightgreen;
   width: 190px;
 }
