@@ -352,27 +352,76 @@ a {
 }
 /* 웹 관련 용어 배너 */
 .term {
-  background: yellow;
+  background: linear-gradient(to bottom, #ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
-  background: linear-gradient(to bottom, #eee, #ccc);
   margin-top: 20px;
-  padding: 10px 15px;
+  padding: 15px;
 }
 .term-heading {
-  margin: 0;
   font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
 }
-.term img {
+.odd,
+.even {
+  overflow: hidden;
+  background: skyblue;
+}
+.even {
+  margin-top: 15px;
+}
+.term-list > div {
+  overflow: hidden;
+  background: skyblue;
+}
+.term-list div:nth-child(even) {
+  margin-top: 15px;
+}
+.term-list {
+  margin: 15px 0 0 0;
+  background: yellow;
+}
+.term-list-subject, 
+.term-list-brief {
+  background: pink;
+  float: right;
+  width: 145px;
+}
+.term-list-subject {
+  color: #296897;
+}
+.term-list-thumbnail {
+  background: lime;
   float: left;
 }
-.term a {
+.term-list-thumbnail img {
   display: block;
 }
-.term p {
-  display: block;
-  margin: 0;
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
 }
+.term-list dd {
+  margin-left: 0;
+  
+}
+.even .term-list-subject,
+.even .term-list-brief {
+  float: left;
+}
+.even .term-list-thumbnail {
+  float: right;
+}
+.term-list div:nth-child(even) .term-list-subject,
+.term-list div:nth-child(even) .term-list-brief {
+  float: left;
+}
+.term-list div:nth-child(even) .term-list-thumbnail {
+  float: right;
+}
+
 .slogan {
   background: orange;
 }
