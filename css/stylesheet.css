@@ -453,9 +453,7 @@ a {
 }
 /* 공지사항 및 자료실 */
 .board{
-  background: yellow;
   position: relative;
-  height: 200px;
   margin-top: 20px;
 }
 .notice-list,
@@ -471,8 +469,16 @@ a {
   display: block;
 }
 .tab {
-  float: left;
+  /* float: left; */
   margin: 0;
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 83px;
 }
 .tab a {
   display: block;
@@ -482,7 +488,10 @@ a {
   color: #999;
   font-size: 1.4rem;
   font-weight: 400;
-  padding: 5px 10px;
+  padding: 5px 15px;
+}
+.is-active .tab {
+  z-index: 5;
 }
 .is-active .tab a {
   color: #ed702d;
@@ -495,10 +504,11 @@ a {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  background: skyblue;
-  position: absolute;
+  padding-top: 45px;
+  min-height: 170px;
+  /* position: absolute; 
   left: 0;
-  top: 45px;
+  top: 45px; */
 }
 .notice-list li,
 .pds-list li {
@@ -519,7 +529,6 @@ a {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: pink;
   padding: 8px;
 }
 .notice-more::before,   /* ::before를 쓰는 이유는 a태그에 .icon-plus가 붙어있어서 비포가상요소선택자로 그 아이콘만 선택해준다 */
